@@ -1,0 +1,38 @@
+
+<div class="container">
+  <h1>Flats</h1>
+
+  <div class="flat-list">
+    <% @flats.each do |flat| %>
+
+    <div class="card-trip">
+      <img src="https://images.unsplash.com/photo-1493246318656-5bfd4cfb29b8?ixid=MXwxMjA3fDB8MHxzZWFyY2h8MTh8fGFwcGFydG1lbnR8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=60" />
+      <div class="card-trip-infos">
+        <div>
+          <h2><%= flat.name %></h2>
+          <p><%= flat.address %></p>
+        </div>
+        <h2 class="card-trip-pricing"><%= flat.price_per_night %>€ per night</h2>
+      </div>
+    </div>
+
+    <% end %>
+  </div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -19,7 +19,6 @@ Flat.create!(
   number_of_guests: 3
 )
 
-
 Flat.create!(
   name: 'kempinsky',
   address: 'geneve',

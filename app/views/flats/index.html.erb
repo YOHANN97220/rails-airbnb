@@ -1,6 +1,37 @@
-
 <div class="container">
-  <h1>Flats</h1>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid justify-content-between">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+      </ul>
+    </div>
+     <div>
+        <form class="d-flex justify-content-between">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+
+      </div>
+  </div>
+</nav>
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4))">
+  <div class="container">
+    <h1>Le Wagon brings <strong>tech skills</strong> to <strong>creative people</strong>!</h1>
+    <p>Change your life and learn to code at one of our campuses around the world.</p>
+    <a class="btn btn-flat" href="#">Apply now</a>
+  </div>
+</div>
+
+
+<h1>Flats</h1>
 
   <div class="flat-list">
     <% @flats.each do |flat| %>
@@ -12,15 +43,16 @@
           <h2><%= flat.name %></h2>
           <p><%= flat.address %></p>
         </div>
-        <h2 class="card-trip-pricing"><%= flat.price_per_night %>€ per night</h2>
+        <h2 class="card-trip-pricing"><%= flat.price_per_night %>€</h2>
       </div>
+      <div class="card-trip-description border-dark mb-3 mt-3" style="max-width: 18rem;"><%= link_to "more info", flat_path(flat) %></div>
     </div>
 
     <% end %>
   </div>
-
-
 </div>
+
+
 
 
 
